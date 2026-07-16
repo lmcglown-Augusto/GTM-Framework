@@ -3,11 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, nocache">
-<meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
-<meta name="googlebot-news" content="noindex">
-<meta name="bingbot" content="noindex, nofollow">
-<title>Untitled</title>
+<title>Augusto Digital: GTM Plan</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0;}
 :root{
@@ -55,7 +51,7 @@ body{font-family:var(--font);background:var(--navy);color:var(--text);min-height
 #main{display:none;height:100vh;flex-direction:row;}
 
 /* SIDEBAR */
-#sidebar{width:var(--sidebar-w);background:var(--sidebar);border-right:1px solid var(--border);display:flex;flex-direction:column;flex-shrink:0;overflow-y:auto;}
+#sidebar{width:var(--sidebar-w);background:var(--sidebar);border-right:1px solid var(--border);display:flex;flex-direction:column;flex-shrink:0;overflow-y:auto;height:100vh;}
 #sidebar::-webkit-scrollbar{width:3px;}
 #sidebar::-webkit-scrollbar-thumb{background:var(--border);border-radius:2px;}
 .sb-brand{padding:28px 22px 22px;border-bottom:1px solid var(--border);}
@@ -292,14 +288,10 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:15px;heigh
       <div class="sb-name">Augusto Digital</div>
       <div class="sb-tag">GTM Plan</div>
     </div>
-    <div class="sb-plan" onclick="togPlan('pg0',this)"><span>Growth Vision</span><span class="pl-arr">▼</span></div>
-    <div class="plan-group" id="pg0" style="max-height:600px;">
-      <button class="nav-btn active" onclick="showSec('sgv',this)"><span class="nav-num">00</span><span>Why We Show Up</span></button>
-    </div>
-    <div class="sb-plan collapsed" onclick="togPlan('pg1',this)"><span>Positioning Strategy</span><span class="pl-arr">▼</span></div>
-    <div class="plan-group collapsed" id="pg1" style="max-height:0;">
+    <div class="sb-plan" onclick="togPlan('pg1',this)"><span>Positioning Strategy</span><span class="pl-arr">▼</span></div>
+    <div class="plan-group" id="pg1" style="max-height:600px;">
       <div class="sb-group">Start Here</div>
-      <button class="nav-btn" onclick="showSec('s0',this)"><span class="nav-num">01</span><span>The Ask</span></button>
+      <button class="nav-btn active" onclick="showSec('s0',this)"><span class="nav-num">01</span><span>The Augusto Story</span></button>
       <div class="sb-group">Strategy</div>
       <button class="nav-btn" onclick="showSec('s1',this)"><span class="nav-num">02</span><span>The 2026 Positioning</span></button>
       <button class="nav-btn" onclick="showSec('s2',this)"><span class="nav-num">03</span><span>How We Got Here</span></button>
@@ -315,8 +307,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:15px;heigh
     <div class="sb-plan collapsed" onclick="togPlan('pg2',this)"><span>Marketing Strategy</span><span class="pl-arr">▼</span></div>
     <div class="plan-group collapsed" id="pg2" style="max-height:0;">
       <button class="nav-btn" onclick="showSec('s20',this)"><span class="nav-num">—</span><span>Marketing Strategy</span></button>
-      <button class="nav-btn" onclick="showSec('s21',this)"><span class="nav-num">—</span><span>LinkedIn</span></button>
-      <button class="nav-btn" onclick="showSec('s22',this)"><span class="nav-num">—</span><span>Events</span></button>
+      <button class="nav-btn" onclick="showSec('s21',this)"><span class="nav-num">—</span><span>Website Wireframe</span></button>
     </div>
     <div class="sb-plan collapsed" onclick="togPlan('pg3',this)"><span>Sales Strategy</span><span class="pl-arr">▼</span></div>
     <div class="plan-group collapsed" id="pg3" style="max-height:0;">
@@ -327,66 +318,26 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:15px;heigh
       <button class="nav-btn" onclick="showSec('s12',this)"><span class="nav-num">12</span><span>Handling Resistance</span></button>
       <button class="nav-btn" onclick="showSec('s13',this)"><span class="nav-num">13</span><span>The Close</span></button>
     </div>
+    <div class="sb-plan collapsed" onclick="togPlan('pg5',this)"><span>Tools</span><span class="pl-arr">▼</span></div>
+    <div class="plan-group collapsed" id="pg5" style="max-height:0;">
+      <button class="nav-btn" onclick="showSec('s25',this)"><span class="nav-num">—</span><span>Tools</span></button>
+    </div>
     <div class="sb-plan collapsed" onclick="togPlan('pg4',this)"><span>Execution Checklist</span><span class="pl-arr">▼</span></div>
     <div class="plan-group collapsed" id="pg4" style="max-height:0;">
       <button class="nav-btn" onclick="showSec('s30',this)"><span class="nav-num">—</span><span>GTM Checklist</span></button>
     </div>
+    <div style="padding:14px 22px 20px;margin-top:4px;border-top:1px solid var(--border);">
+      <button onclick="downloadMD()" style="width:100%;background:none;border:1px solid var(--border-teal);border-radius:7px;padding:10px 14px;color:var(--teal);font-size:11px;font-weight:700;font-family:var(--font);letter-spacing:0.05em;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:background 0.15s;" onmouseover="this.style.background='rgba(0,200,150,0.08)'" onmouseout="this.style.background='none'"><svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.5 1v8M3.5 6.5l3 3 3-3M2 11h9" stroke="#00C896" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Download MD File</button>
+    </div>
   </div>
+
 
   <!-- CONTENT -->
   <div id="content">
 
 
-    <!-- SGV: GROWTH VISION -->
-    <div class="section active" id="sgv">
-      <div class="sec-eye">Our Growth Vision</div>
-      <div class="sec-bar"></div>
-
-      <!-- NORTH STAR -->
-      <div style="padding:20px 0 28px;">
-        <div style="font-size:44px;font-weight:700;color:var(--teal);line-height:1.1;margin-bottom:22px;letter-spacing:-0.01em;">Activate the human<br>advantages of AI<br>transformation.</div>
-        <div style="font-size:14px;color:var(--text);line-height:1.85;max-width:560px;">Use our growth vision as a daily decision filter. Doing so will ensure our work connects to an about us story that cements our reputation in the AI Activation Partner category.</div>
-      </div>
-
-
-      <!-- THE OUTCOME WE ENABLE -->
-      <div style="margin-bottom:12px;border-top:1px solid var(--border);padding-top:16px;">
-        <button class="exp-btn" onclick="tog(this)" style="font-size:9px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--white);padding:0 0 4px;justify-content:space-between;width:100%;">The Outcome We Enable <span class="arr" style="font-size:8px;color:var(--muted);">▼</span></button>
-        <div class="dt-block" style="margin-top:12px;">
-          <div class="intro-block">
-            <div class="txt-ov">The companies we serve have tried, but struggled to close the gap between their AI aspirations and what AI has actually delivered. Our job is to close that gap.</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- THE ALIGNMENT TEST -->
-      <div style="margin-bottom:52px;border-top:1px solid var(--border);padding-top:16px;">
-        <button class="exp-btn" onclick="tog(this)" style="font-size:9px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--white);padding:0 0 4px;justify-content:space-between;width:100%;">The Alignment Test <span class="arr" style="font-size:8px;color:var(--muted);">▼</span></button>
-        <div class="dt-block" style="margin-top:12px;">
-          <div style="background:rgba(0,200,150,0.05);border:1px solid rgba(0,200,150,0.2);border-radius:10px;padding:24px 28px;">
-            <div style="font-size:12px;color:var(--muted);margin-bottom:18px;line-height:1.75;">Run every major decision through these three questions:</div>
-            <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:20px;">
-              <div style="display:flex;gap:14px;align-items:flex-start;">
-                <div style="font-size:11px;font-weight:700;color:var(--teal);min-width:22px;padding-top:1px;">01</div>
-                <div style="font-size:13px;color:var(--text);line-height:1.65;">Does this <span style="color:var(--teal);font-weight:600;">activate the human advantages</span> of AI transformation?</div>
-              </div>
-              <div style="display:flex;gap:14px;align-items:flex-start;">
-                <div style="font-size:11px;font-weight:700;color:var(--teal);min-width:22px;padding-top:1px;">02</div>
-                <div style="font-size:13px;color:var(--text);line-height:1.65;">Does this serve or attract <span style="color:var(--teal);font-weight:600;">mid-market companies</span> ($50M–$1B)?</div>
-              </div>
-              <div style="display:flex;gap:14px;align-items:flex-start;">
-                <div style="font-size:11px;font-weight:700;color:var(--teal);min-width:22px;padding-top:1px;">03</div>
-                <div style="font-size:13px;color:var(--text);line-height:1.65;">Does this reinforce Augusto as the <span style="color:var(--teal);font-weight:600;">Ai Activation Partner</span>?</div>
-              </div>
-            </div>
-            <div style="padding-top:16px;border-top:1px solid var(--border);font-size:12px;color:var(--muted);font-style:italic;">If the answer to all three is yes, move. If not, examine why before committing.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <!-- S0: THE AUGUSTO STORY -->
-    <div class="section" id="s0">
+    <div class="section active" id="s0">
       <div class="sec-eye">Start Here · 01</div>
       <div class="sec-bar"></div>
 
@@ -427,18 +378,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:15px;heigh
           <div class="card-head"><div class="card-lbl">Category</div><div class="card-val">Activation Partner</div></div>
           <div class="lbl-ov">Overview</div><div class="txt-sm">This names the type of company Augusto is.</div>
           <button class="exp-btn" onclick="tog(this)">Read more <span class="arr">▼</span></button>
-          <div class="dt-block">
-            <div style="display:flex;flex-direction:column;gap:12px;margin-top:8px;">
-              <div style="display:flex;gap:14px;align-items:flex-start;">
-                <div style="min-width:90px;font-size:12px;font-weight:700;text-decoration:underline;color:var(--white);">Activation</div>
-                <div class="txt-dt">Signals that we know how to make AI actually work.</div>
-              </div>
-              <div style="display:flex;gap:14px;align-items:flex-start;">
-                <div style="min-width:90px;font-size:12px;font-weight:700;text-decoration:underline;color:var(--white);">"Partner"</div>
-                <div class="txt-dt">Signals that working with Augusto yields shared accountability over time.</div>
-              </div>
-            </div>
-          </div>
+          <div class="dt-block"><div class="txt-dt">"Activation" signals that we start where most firms stop: making AI actually work inside an organization, with its people, in its existing environment. "Partner" signals that we share accountability for the outcome, not just the delivery.</div></div>
         </div>
         <div class="card">
           <div class="card-head"><div class="card-lbl">Attribute</div><div class="card-val">Ai</div></div>
@@ -712,7 +652,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:15px;heigh
       <div class="sec-bar"></div>
       <div class="intro-block">
         <div class="lbl-ov">Overview</div>
-        <div class="txt-ov">Augusto delivers Intelligence solutions across nine core functions, each built to activate AI where your people need it most.</div>
+        <div class="txt-ov">Augusto delivers Intelligence solutions, each built to activate AI in a specific part of your business.</div>
         <button class="exp-btn" onclick="tog(this)">Read more <span class="arr">▼</span></button>
         <div class="dt-block">
           <div class="lbl-dt">Details</div>
@@ -801,39 +741,13 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:15px;heigh
         </div>
       </div>
 
-      <!-- COMPANY INTELLIGENCE -->
+      <!-- MEMORY -->
       <div class="sol-card" id="sme">
         <div class="sol-hd" onclick="togSol('sme')"><div class="sol-name">Company Intelligence</div><div class="sol-arr">▼</div></div>
         <div class="sol-body">
-          <div class="sol-ov">Augusto builds AI systems that capture what your organization knows and amplify what your people can do with it — across every function, not just one.</div>
-          <div class="sol-dt">Company Intelligence operates at two levels. The <strong>Company Brain</strong> layer ensures critical organizational knowledge is captured, structured, and accessible to everyone who needs it. The <strong>My Brain</strong> layer gives individuals AI that works for their specific role — so each person can act on answers without depending on someone else to have them.</div>
-          <div class="umbrella">Is your organization's knowledge an asset? Or does it walk out the door every time someone leaves?</div>
-
-          <!-- COMPANY BRAIN / MY BRAIN BREAKDOWN -->
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:18px 0;">
-            <div style="background:rgba(0,200,150,0.05);border:1px solid rgba(0,200,150,0.18);border-radius:8px;padding:16px 18px;">
-              <div style="font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);margin-bottom:10px;">Company Brain</div>
-              <div style="font-size:12px;color:var(--muted);line-height:1.7;margin-bottom:10px;">The collective intelligence layer — what the organization knows, structured and accessible to anyone who needs it.</div>
-              <div style="display:flex;flex-direction:column;gap:5px;">
-                <div style="font-size:11px;color:var(--text);">→ Interactive knowledge centers</div>
-                <div style="font-size:11px;color:var(--text);">→ SME scaling systems</div>
-                <div style="font-size:11px;color:var(--text);">→ Institutional memory preservation</div>
-                <div style="font-size:11px;color:var(--text);">→ Onboarding intelligence</div>
-              </div>
-            </div>
-            <div style="background:rgba(0,200,150,0.05);border:1px solid rgba(0,200,150,0.18);border-radius:8px;padding:16px 18px;">
-              <div style="font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);margin-bottom:10px;">My Brain</div>
-              <div style="font-size:12px;color:var(--muted);line-height:1.7;margin-bottom:10px;">The individual intelligence layer — AI that works for each person's role, amplifying what they can do without depending on others to have the answer.</div>
-              <div style="display:flex;flex-direction:column;gap:5px;">
-                <div style="font-size:11px;color:var(--text);">→ Role-specific AI assistants</div>
-                <div style="font-size:11px;color:var(--text);">→ Personal productivity amplification</div>
-                <div style="font-size:11px;color:var(--text);">→ Individual decision support</div>
-                <div style="font-size:11px;color:var(--text);">→ Contextual information retrieval</div>
-              </div>
-            </div>
-          </div>
-          <div style="font-size:12px;color:var(--muted);line-height:1.7;margin-bottom:16px;padding:12px 14px;border-left:2px solid var(--teal);background:rgba(0,200,150,0.03);border-radius:0 6px 6px 0;">Every function has a knowledge problem and a capacity problem. Company Intelligence is the layer that makes both solvable — which is why it sits across all eight core functions.</div>
-
+          <div class="sol-ov">Augusto builds the AI systems that capture what your organization knows and make it available to everyone who needs it.</div>
+          <div class="sol-dt">From interactive knowledge centers and SME scaling to institutional memory preservation, we build what your organization needs to ensure critical knowledge is accessible, regardless of who holds it today.</div>
+          <div class="umbrella">Is your organization's knowledge an asset? Or is it a risk every time someone walks out the door?</div>
           <div class="diag-lbl">Rate your situation</div>
           <div class="diag-stmt"><div class="diag-txt">We have people whose knowledge the organization runs on, and they cannot meet the demand for it.</div><input type="range" min="1" max="5" value="1" oninput="updDiag('me',this)"><div class="slider-labs"><span>Not an issue</span><span>This is exactly us</span></div></div>
           <div class="diag-stmt"><div class="diag-txt">When key people leave, we lose years of institutional knowledge with them.</div><input type="range" min="1" max="5" value="1" oninput="updDiag('me',this)"><div class="slider-labs"><span>Not an issue</span><span>This is exactly us</span></div></div>
@@ -875,22 +789,6 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:15px;heigh
         </div>
       </div>
 
-      <!-- ENGINEERING INTELLIGENCE -->
-      <div class="sol-card" id="seng">
-        <div class="sol-hd" onclick="togSol('seng')"><div class="sol-name">Engineering Intelligence</div><div class="sol-arr">▼</div></div>
-        <div class="sol-body">
-          <div class="sol-ov">Augusto builds the AI systems that give your engineering team leverage — so they spend less time on the work surrounding development and more time on the work that moves the product forward.</div>
-          <div class="sol-dt">From automated code review and documentation to incident response and deployment intelligence, we build what your engineering team needs to ship faster, reduce technical debt, and make decisions with visibility instead of guesswork.</div>
-          <div class="umbrella">Is your engineering team building the product? Or drowning in the work that surrounds it?</div>
-          <div class="diag-lbl">Rate your situation</div>
-          <div class="diag-stmt"><div class="diag-txt">Our engineers spend too much time on manual code review, documentation, and context-switching instead of building.</div><input type="range" min="1" max="5" value="1" oninput="updDiag('eng',this)"><div class="slider-labs"><span>Not an issue</span><span>This is exactly us</span></div></div>
-          <div class="diag-stmt"><div class="diag-txt">Incidents reach production before our team has the context to understand why.</div><input type="range" min="1" max="5" value="1" oninput="updDiag('eng',this)"><div class="slider-labs"><span>Not an issue</span><span>This is exactly us</span></div></div>
-          <div class="diag-stmt"><div class="diag-txt">Our technical debt is growing faster than our team can address it.</div><input type="range" min="1" max="5" value="1" oninput="updDiag('eng',this)"><div class="slider-labs"><span>Not an issue</span><span>This is exactly us</span></div></div>
-          <div class="diag-stmt"><div class="diag-txt">New engineers take too long to onboard because the knowledge they need lives in people's heads, not in a system.</div><input type="range" min="1" max="5" value="1" oninput="updDiag('eng',this)"><div class="slider-labs"><span>Not an issue</span><span>This is exactly us</span></div></div>
-          <div class="diag-sum" id="ds-eng"><div class="sum-lbl">What this tells us</div><div class="sum-txt" id="dt-eng"></div><div class="sum-cta">Engineering Intelligence may be your highest-priority activation area. Start with a Rumble to pinpoint exactly where your team's energy is going.</div></div>
-        </div>
-      </div>
-
     </div>
 
     <!-- S6: HOW WE WORK -->
@@ -910,22 +808,9 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:15px;heigh
       <div class="step-card">
         <div class="step-num">Step 1</div>
         <div class="step-title">The Rumble</div>
-        <div class="lbl-ov">Activate Where AI Goes First</div>
-        <div class="txt-sm" style="margin-bottom:16px;">Use a structured discovery process to <strong>map the full picture of AI activation opportunities</strong> across your core business functions: IT, Operations, Finance, Sales, Marketing, HR, and beyond.</div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px;">
-          <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:16px 18px;">
-            <div style="font-size:22px;font-weight:700;color:var(--teal);margin-bottom:6px;">$10,000</div>
-            <div style="font-size:9px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--white);margin-bottom:8px;">Single Core Function Focus</div>
-            <div style="font-size:12px;color:var(--muted);line-height:1.65;">Pinpoint one high-priority domain (Finance, Operations, Sales, etc.) and map where to activate AI first.</div>
-          </div>
-          <div style="background:var(--card);border:2px solid var(--teal);border-radius:8px;padding:16px 18px;position:relative;">
-            <div style="position:absolute;top:10px;right:12px;font-size:9px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);">Recommended</div>
-            <div style="font-size:22px;font-weight:700;color:var(--teal);margin-bottom:6px;">$25,000</div>
-            <div style="font-size:9px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--white);margin-bottom:8px;">Business-Wide Diagnosis</div>
-            <div style="font-size:12px;color:var(--muted);line-height:1.65;">Full cross-functional view across all domains. A complete activation roadmap with priorities ranked by impact.</div>
-          </div>
-        </div>
-        <div style="font-size:12px;color:var(--text);line-height:1.7;font-style:italic;"><strong>Result?</strong> You walk away with a prioritized roadmap and a summarized scale of win opportunities we are ready to build.</div>
+        <div class="lbl-ov">Overview</div><div class="txt-sm">A fixed-price, two-week working session that produces a prioritized roadmap and a quick win ready to build.</div>
+        <button class="exp-btn" onclick="tog(this)">Read more <span class="arr">▼</span></button>
+        <div class="dt-block"><div class="txt-dt">At $10K, the Rumble is designed to be a small enough commitment to say yes to and significant enough to produce real value. By the end of two weeks, the client has a clear picture of where their people are spending energy that AI should be carrying, which Intelligence solution deserves the most urgent attention, and a quick win ready to activate. The Rumble is not a discovery call. It is the first proof that Augusto works.</div></div>
       </div>
       <div class="step-card">
         <div class="step-num">Step 2</div>
@@ -936,7 +821,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:15px;heigh
       </div>
       <div class="step-card">
         <div class="step-num">Step 3</div>
-        <div class="step-title">Satisfaction Guarantee</div>
+        <div class="step-title">The Quarterly Satisfaction Guarantee</div>
         <div class="lbl-ov">Overview</div><div class="txt-sm">Every Augusto engagement is backed by a satisfaction guarantee.</div>
         <button class="exp-btn" onclick="tog(this)">Read more <span class="arr">▼</span></button>
         <div class="dt-block"><div class="txt-dt">Every ninety days, Augusto formally checks in on satisfaction, ROI, and any risks to the work landing as intended. If it is not working, Augusto fixes it at no additional cost. This guarantee is not a clause buried in a contract. It is a standing commitment that shapes how every engagement is run from the first day to the last.</div></div>
@@ -1311,7 +1196,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:15px;heigh
         <button class="exp-btn" onclick="tog(this)">Read more <span class="arr">▼</span></button>
         <div class="dt-block">
           <div class="lbl-dt">Details</div>
-          <div class="txt-dt">Keeping these pipelines separate ensures that revenue is tracked cleanly by line of business, conversion rates are meaningful for each selling motion, and no deal sits in a waiting pattern while another progresses. Each pipeline has its own stages, its own exit criteria, and its own definition of closed won.</div>
+          <div class="txt-dt">Keeping these pipelines separate ensures that revenue and respective conversion rates are tracked cleanly by line of business.</div>
         </div>
       </div>
 
@@ -1326,14 +1211,14 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:15px;heigh
         <div class="lob-card">
           <div class="lbl-ov">Pipeline 2</div>
           <div class="lob-name">Scale of Wins</div>
-          <div class="lob-desc">A new opportunity opened after the Rumble delivers its identified wins. 5-stage pipeline anchored by the proposal tool. Not a continuation of the Rumble deal.</div>
+          <div class="lob-desc">A new opportunity opened immediately following a Rumble proposal moving to Closed Won.</div>
           <div class="lob-price">$25K – $250K+</div>
         </div>
         <div class="lob-card">
           <div class="lbl-ov">Pipeline 3</div>
           <div class="lob-name">Projects</div>
-          <div class="lob-desc">One-off engagements outside the Rumble pathway. Separate pipeline, separate revenue contribution. Defined independently.</div>
-          <div class="lob-price">TBD</div>
+          <div class="lob-desc">Project-specific engagements outside the Rumble pathway.</div>
+          <div class="lob-price">Billing Ranges</div>
         </div>
       </div>
 
@@ -1566,17 +1451,24 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:15px;heigh
         </div>
         <div class="stg-body">
           <div class="stg-lbl">Intent</div>
-          <div class="stg-txt">Convert the verbal commitment into a signed contract through the purchasing, IT, and legal tracks on the client side.</div>
+          <div class="stg-txt">Convert the verbal commitment into a signed contract.</div>
           <div class="stg-lbl">Key Actions</div>
           <div class="stg-txt"><ul>
-            <li>New client onboarding team manages the three closing tracks: Purchasing, IT, Legal.</li>
-            <li>Rep holds weekly check-in with the onboarding team to identify where support is needed.</li>
-            <li>Rep conducts a 30-minute handoff meeting using a standardized deal brief covering: the committee (names, titles, roles, buyer styles), the deal (Rumble tier and scope), the verbal commitment, lead priorities, resolved concerns, and closing track owners and timing.</li>
-            <li>Most leads commit to the Rumble only at first. Scale of Win scope is determined after the Rumble completes.</li>
+            <li>Confirm how the lead's company formalizes purchasing agreements.</li>
+            <li>Ask the lead to send you an email confirming their intent to engage Augusto for a Rumble.</li>
+            <li>Immediately following email receipt of the verbal, inform the lead they will receive the SOW within 24 hours.</li>
+            <li>Upon receipt of the signed SOW, send the new client your HubSpot meeting schedule link, and encourage them to set an on-boarding meeting within the next 2-3 business days.</li>
           </ul></div>
           <div class="stg-exit">
             <div class="stg-lbl">Exit Criteria</div>
             <div class="stg-txt">All three closing tracks are complete and the contract is executed.</div>
+          </div>
+          <div style="margin-top:18px;padding-top:16px;border-top:1px solid var(--border);">
+            <div class="stg-lbl" style="margin-bottom:8px;">Documents</div>
+            <a href="https://docs.google.com/document/d/1v28fNgAftn9l6XUAO_Kahpeus4PfJGozudE15oNJoiA/edit?usp=sharing" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border:1px solid var(--border);border-radius:7px;text-decoration:none;background:rgba(255,255,255,0.02);transition:border-color 0.15s;width:100%;" onmouseover="this.style.borderColor='rgba(0,200,150,0.35)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.07)'">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 1v9M4 7l3 3 3-3M1 12h12" stroke="#00C896" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span style="font-size:12px;font-weight:600;color:var(--text);">SOW Template — Rumble</span>
+            </a>
           </div>
         </div>
       </div>
@@ -2061,147 +1953,49 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:15px;heigh
       <div class="section-spacer"></div>
     </div>
 
-    <!-- S21: LINKEDIN -->
+    <!-- S21: WEBSITE WIREFRAME -->
     <div class="section" id="s21">
       <div class="sec-eye">Marketing Strategy</div>
-      <div class="sec-title">LinkedIn</div>
+      <div class="sec-title">Website Wireframe</div>
       <div class="sec-bar"></div>
-      <div class="intro-block">
-        <div class="lbl-ov">Overview</div>
-        <div class="txt-ov">LinkedIn is Augusto's highest-leverage owned channel. The goal is not follower counts — it is to build enough consistent presence that the right mid-market buyer recognizes Augusto's point of view before the first conversation begins.</div>
-        <button class="exp-btn" onclick="tog(this)">Read more <span class="arr">▼</span></button>
-        <div class="dt-block">
-          <div class="lbl-dt">The Principle</div>
-          <div class="txt-dt">Lead with the buyer's problem, not Augusto's capabilities. Posts and articles that perform best name the specific friction mid-market buyers are carrying — and show what changes when it is addressed. Ninety days of consistent presence from key leaders compounds into a material pipeline contribution.</div>
-        </div>
+      <div style="border-radius:10px;overflow:hidden;border:1px solid var(--border);background:var(--card);">
+        <iframe src="https://lmcglown-augusto.github.io/web-refresh-2026/company-intelligence.html" style="width:100%;height:78vh;border:none;display:block;" title="Website Wireframe — 2026 Refresh" loading="lazy"></iframe>
       </div>
-      <div class="grid">
-        <div class="card">
-          <div class="card-lbl" style="margin-bottom:10px;">Content Strategy</div>
-          <div class="lbl-ov">Overview</div>
-          <div class="txt-sm">One post per week per key leader. Consistent over sixty to ninety days builds authority that paid spend cannot buy.</div>
-          <button class="exp-btn" onclick="tog(this)">Read more <span class="arr">▼</span></button>
-          <div class="dt-block">
-            <div style="display:flex;flex-direction:column;gap:10px;margin-top:10px;">
-              <div style="background:rgba(0,200,150,0.05);border:1px solid var(--border-teal);border-radius:8px;padding:12px 14px;">
-                <div style="font-size:9px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);margin-bottom:6px;">Problem-First Posts</div>
-                <div class="txt-dt">Name the friction. Describe what it costs. Show what changes when it is removed. Never open with Augusto — open with the situation the buyer recognizes.</div>
-              </div>
-              <div style="background:rgba(0,200,150,0.05);border:1px solid var(--border-teal);border-radius:8px;padding:12px 14px;">
-                <div style="font-size:9px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);margin-bottom:6px;">Client Stories</div>
-                <div class="txt-dt">Short-form versions of case studies. What the client was experiencing, what the Rumble found, what changed. Buyers read these and see themselves.</div>
-              </div>
-              <div style="background:rgba(0,200,150,0.05);border:1px solid var(--border-teal);border-radius:8px;padding:12px 14px;">
-                <div style="font-size:9px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);margin-bottom:6px;">Point of View Articles</div>
-                <div class="txt-dt">Long-form takes on where AI activation is heading for mid-market companies. Establishes Augusto leaders as practitioners with a perspective — not vendors with a pitch.</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-lbl" style="margin-bottom:10px;">Key Leaders</div>
-          <div class="lbl-ov">Overview</div>
-          <div class="txt-sm">Three voices publishing consistently creates more surface area than one brand account. Each leader owns a distinct angle tied to their role and buyer relationship.</div>
-          <button class="exp-btn" onclick="tog(this)">Read more <span class="arr">▼</span></button>
-          <div class="dt-block">
-            <div class="txt-dt" style="margin-top:8px;">Prioritize content that reflects firsthand experience — observations from Rumble engagements, patterns seen across clients, decisions that surprised the team. Authentic practitioner content outperforms polished brand content on LinkedIn consistently.</div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-lbl" style="margin-bottom:10px;">Paid LinkedIn</div>
-          <div class="lbl-ov">Overview</div>
-          <div class="txt-sm">Paid spend amplifies owned content. It does not replace it. No paid campaign should run until the organic content calendar is running cleanly for thirty days.</div>
-          <button class="exp-btn" onclick="tog(this)">Read more <span class="arr">▼</span></button>
-          <div class="dt-block">
-            <div style="margin-top:10px;">
-              <div class="avoid-item" style="border-bottom:1px solid var(--border);padding-bottom:10px;margin-bottom:10px;">
-                <span style="font-size:11px;font-weight:700;color:var(--teal);flex-shrink:0;min-width:100px;">Targeting</span>
-                <span class="txt-dt">Mid-market titles: CFO, COO, CEO, VP Operations, VP Finance. Company size $50M–$1B. Industries where AI activation has a clear ROI story.</span>
-              </div>
-              <div class="avoid-item">
-                <span style="font-size:11px;font-weight:700;color:var(--teal);flex-shrink:0;min-width:100px;">Retargeting</span>
-                <span class="txt-dt">Quiz funnel visitors who did not complete. Warm contacts who have engaged with organic content. These audiences convert at a significantly higher rate than cold targeting.</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="section-spacer"></div>
     </div>
 
-    <!-- S22: EVENTS -->
-    <div class="section" id="s22">
-      <div class="sec-eye">Marketing Strategy</div>
-      <div class="sec-title">Events</div>
+    <!-- S25: TOOLS -->
+    <div class="section" id="s25">
+      <div class="sec-eye">Tools</div>
+      <div class="sec-title">Tools</div>
       <div class="sec-bar"></div>
-      <div class="intro-block">
-        <div class="lbl-ov">Overview</div>
-        <div class="txt-ov">Events are Augusto's highest-trust channel. One leader on a panel or keynote in a mid-market CFO, COO, or CEO forum is worth more than months of content. Show up as a practitioner with a point of view — not a vendor with a pitch.</div>
-        <button class="exp-btn" onclick="tog(this)">Read more <span class="arr">▼</span></button>
-        <div class="dt-block">
-          <div class="lbl-dt">Why Events Work</div>
-          <div class="txt-dt">Mid-market buyers are cautious. They do not make large commitments to vendors they have never encountered in a credible context. A speaking slot puts Augusto in the room with exactly the right buyers, in a context where Augusto is positioned as an expert — not a vendor asking for time. The conversations that follow are categorically different from cold outreach.</div>
-        </div>
+
+      <div style="margin-bottom:36px;">
+        <div style="font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;">Proposals</div>
+    <a href="#" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border:1px solid var(--border);border-radius:7px;text-decoration:none;background:rgba(255,255,255,0.02);transition:border-color 0.15s;width:100%;margin-bottom:8px;" onmouseover="this.style.borderColor='rgba(0,200,150,0.35)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.07)'">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 2h8a1 1 0 0 1 1 1v10l-3-2-3 2V3a1 1 0 0 1 1-1z" stroke="#00C896" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span style="font-size:12px;font-weight:600;color:var(--text);">Scale of Wins Proposal Tool</span>
+    </a>
       </div>
-      <div class="grid">
-        <div class="card">
-          <div class="card-lbl" style="margin-bottom:10px;">Target Events</div>
-          <div class="lbl-ov">Overview</div>
-          <div class="txt-sm">Prioritize events where mid-market CFOs, COOs, and CEOs are in the room — not technology conferences where Augusto competes with vendors for buyer attention.</div>
-          <button class="exp-btn" onclick="tog(this)">Read more <span class="arr">▼</span></button>
-          <div class="dt-block">
-            <div style="display:flex;flex-direction:column;gap:10px;margin-top:10px;">
-              <div style="background:rgba(0,200,150,0.05);border:1px solid var(--border-teal);border-radius:8px;padding:12px 14px;">
-                <div style="font-size:9px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);margin-bottom:6px;">Tier 1 — Speaking Slots</div>
-                <div class="txt-dt">Mid-market CEO, CFO, COO, and operations leadership forums. Industry association events where our ICP holds board seats or committee roles. The goal is a keynote or panel position — not a booth.</div>
-              </div>
-              <div style="background:rgba(0,200,150,0.05);border:1px solid var(--border-teal);border-radius:8px;padding:12px 14px;">
-                <div style="font-size:9px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);margin-bottom:6px;">Tier 2 — Hosted Events</div>
-                <div class="txt-dt">Augusto-hosted roundtables for ten to fifteen mid-market leaders. Intimate, invitation-only, focused on a specific business problem AI is solving. Rumble is never pitched — it emerges as the obvious next step.</div>
-              </div>
-              <div style="background:rgba(0,200,150,0.05);border:1px solid var(--border-teal);border-radius:8px;padding:12px 14px;">
-                <div style="font-size:9px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);margin-bottom:6px;">Tier 3 — Strategic Attendance</div>
-                <div class="txt-dt">Events where clients or referral partners are presenting. Show up to support and be visible in the right rooms — not to prospect directly.</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-lbl" style="margin-bottom:10px;">Speaking Strategy</div>
-          <div class="lbl-ov">Overview</div>
-          <div class="txt-sm">Every talk should leave the audience with one clear idea they did not have before — and a reason to continue the conversation with Augusto.</div>
-          <button class="exp-btn" onclick="tog(this)">Read more <span class="arr">▼</span></button>
-          <div class="dt-block">
-            <div class="txt-dt" style="margin-top:8px;">Lead with the buyer's problem. Use client stories (anonymized where needed) to make the stakes concrete. Close with the diagnostic framing — show the audience how to identify where the gap is in their own organization. The Rumble becomes the obvious follow-up without ever being pitched from the stage.</div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-lbl" style="margin-bottom:10px;">Follow-Through</div>
-          <div class="lbl-ov">Overview</div>
-          <div class="txt-sm">An event without follow-through is a networking expense. The work after the room matters as much as the work in it.</div>
-          <button class="exp-btn" onclick="tog(this)">Read more <span class="arr">▼</span></button>
-          <div class="dt-block">
-            <div style="margin-top:10px;">
-              <div class="avoid-item" style="border-bottom:1px solid var(--border);padding-bottom:10px;margin-bottom:10px;">
-                <span style="font-size:11px;font-weight:700;color:var(--teal);flex-shrink:0;min-width:80px;">Same Day</span>
-                <span class="txt-dt">Personalized connection requests while the conversation is still fresh. Reference something specific from the conversation.</span>
-              </div>
-              <div class="avoid-item" style="border-bottom:1px solid var(--border);padding-bottom:10px;margin-bottom:10px;">
-                <span style="font-size:11px;font-weight:700;color:var(--teal);flex-shrink:0;min-width:80px;">Within 48hrs</span>
-                <span class="txt-dt">Short follow-up message with one relevant resource — a client story, the quiz funnel, or a relevant article. No pitch. One clear next step offered.</span>
-              </div>
-              <div class="avoid-item">
-                <span style="font-size:11px;font-weight:700;color:var(--teal);flex-shrink:0;min-width:80px;">30 Days Out</span>
-                <span class="txt-dt">Add warm contacts to the LinkedIn content audience. Let the organic content do the nurturing. Revisit for a direct Rumble conversation after two to three touchpoints.</span>
-              </div>
-            </div>
-          </div>
-        </div>
+
+      <div style="margin-bottom:36px;">
+        <div style="font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;">SOWs</div>
+    <a href="https://docs.google.com/document/d/1v28fNgAftn9l6XUAO_Kahpeus4PfJGozudE15oNJoiA/edit?usp=sharing" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border:1px solid var(--border);border-radius:7px;text-decoration:none;background:rgba(255,255,255,0.02);transition:border-color 0.15s;width:100%;margin-bottom:8px;" onmouseover="this.style.borderColor='rgba(0,200,150,0.35)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.07)'">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 2h8a1 1 0 0 1 1 1v10l-3-2-3 2V3a1 1 0 0 1 1-1z" stroke="#00C896" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span style="font-size:12px;font-weight:600;color:var(--text);">SOW Template — Rumble</span>
+    </a>
       </div>
-      <div class="section-spacer"></div>
+
+      <div>
+        <div style="font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;">Assessments</div>
+    <a href="https://lmcglown-augusto.github.io/Rumble-Readiness/rumbleindex.html" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border:1px solid var(--border);border-radius:7px;text-decoration:none;background:rgba(255,255,255,0.02);transition:border-color 0.15s;width:100%;margin-bottom:8px;" onmouseover="this.style.borderColor='rgba(0,200,150,0.35)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.07)'">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 2h8a1 1 0 0 1 1 1v10l-3-2-3 2V3a1 1 0 0 1 1-1z" stroke="#00C896" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span style="font-size:12px;font-weight:600;color:var(--text);">Rumble Readiness Assessment</span>
+    </a>
+      </div>
     </div>
 
     <!-- S30: EXECUTION CHECKLIST -->
+
     <div class="section" id="s30">
       <div class="sec-eye">Execution Checklist</div>
       <div class="sec-title">GTM Checklist</div>
@@ -2266,106 +2060,161 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:15px;heigh
         <div style="margin:12px 0 18px;">
           <div class="avoid-item"><span class="avoid-x" style="color:var(--teal);">→</span><span>Launch the quiz funnel. Test lead flow end to end before driving external traffic.</span></div>
           <div class="avoid-item"><span class="avoid-x" style="color:var(--teal);">→</span><span>Promote the quiz funnel to existing contacts, the referral network, and the LinkedIn audience of all three key leaders before starting any paid spend.</span></div>
-          <div class="avoid-item"><span class="avoid-x" style="color:var(--teal);">→</span><span>Build the LinkedIn content calendar for key leaders — sixteen posts minimum across all three leaders. Consistent before paid.
-          </span></div>
+          <div class="avoid-item"><span class="avoid-x" style="color:var(--teal);">→</span><span>Build the LinkedIn content calendar for key leaders — sixty-day minimum, one post per week per person, all focused on buyer problems not Augusto capabilities.</span></div>
           <div class="avoid-item"><span class="avoid-x" style="color:var(--teal);">→</span><span>Identify and brief two to three clients for case study development across different Intelligence solution areas.</span></div>
+          <div class="avoid-item"><span class="avoid-x" style="color:var(--teal);">→</span><span>Define LinkedIn Ads targeting parameters: job titles, company size ($50M–$1B revenue), industry filters. Run audience validation before committing budget.</span></div>
+          <div class="avoid-item"><span class="avoid-x" style="color:var(--teal);">→</span><span>Build email nurture sequences for warm leads — five to seven touches, each leading with the buyer's situation, closing with the Rumble as the next step.</span></div>
         </div>
       </div>
 
       <div class="card" style="background:rgba(0,200,150,0.05);border-color:var(--border-teal);margin-top:10px;">
         <div class="card-lbl" style="margin-bottom:8px;">The North Star</div>
-        <div class="txt-sm">Every item on this checklist exists to remove a reason a buyer cannot say yes, a reason a rep cannot execute, or a reason a deal that closes does not start. Work through it in order. The GTM is not live until all three functions are ready.</div>
+        <div class="txt-sm">The GTM strategy is only as strong as the weakest link in its execution. Positioning that is not internalized. A pipeline that is not configured. A funnel that is not live. Each gap is a place where the strategy stops. This checklist exists to close every gap before the market tests it.</div>
       </div>
-
       <div class="section-spacer"></div>
     </div>
 
-  </div><!-- /content -->
-</div><!-- /main -->
+  </div>
+</div>
 
 <script>
-function checkPw(){
-  var v=document.getElementById('pw-input').value;
-  var err=document.getElementById('pw-error');
-  var inp=document.getElementById('pw-input');
-  if(v==='Win$'){
-    document.getElementById('pw-screen').style.display='none';
-    var ack=document.getElementById('ack');
-    ack.style.display='flex';
-    err.textContent='';
-    inp.classList.remove('error');
+function togPlan(id, hdr){
+  const grp = document.getElementById(id);
+  const isOpen = !hdr.classList.contains('collapsed');
+  if(isOpen){
+    grp.style.maxHeight = '0';
+    grp.classList.add('collapsed');
+    hdr.classList.add('collapsed');
   } else {
+    grp.style.maxHeight = grp.scrollHeight + 'px';
+    grp.classList.remove('collapsed');
+    hdr.classList.remove('collapsed');
+  }
+}
+
+function checkPw(){
+  const input=document.getElementById('pw-input');
+  const err=document.getElementById('pw-error');
+  if(input.value==='Win$'){
+    document.getElementById('pw-screen').style.display='none';
+    const ack=document.getElementById('ack');
+    ack.style.display='flex';
+    input.classList.remove('error');
+    err.textContent='';
+  } else {
+    input.classList.add('error');
     err.textContent='Incorrect password. Please try again.';
-    inp.classList.add('error');
-    inp.value='';
+    input.value='';
+    input.focus();
   }
 }
 
 function acknowledge(){
   document.getElementById('ack').style.display='none';
-  var main=document.getElementById('main');
-  main.style.display='flex';
+  document.getElementById('main').style.display='flex';
 }
 
 function showSec(id,btn){
-  document.querySelectorAll('.section').forEach(function(s){s.classList.remove('active');});
-  document.getElementById(id).classList.add('active');
-  document.querySelectorAll('.nav-btn').forEach(function(b){b.classList.remove('active');});
-  if(btn) btn.classList.add('active');
+  document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));
+  const sec=document.getElementById(id);
+  sec.classList.add('active');
+  btn.classList.add('active');
   document.getElementById('content').scrollTop=0;
-}
-
-function togPlan(id,el){
-  var pg=document.getElementById(id);
-  var collapsed=pg.classList.contains('collapsed');
-  pg.classList.toggle('collapsed');
-  el.classList.toggle('collapsed');
-  pg.style.maxHeight=collapsed?'2000px':'0';
+  const expBtns=sec.querySelectorAll('.exp-btn');
+  expBtns.forEach(b=>{
+    b.classList.remove('open');
+    b.nextElementSibling.classList.remove('open');
+    const arr=b.querySelector('.arr');
+    if(arr) arr.style.transform='';
+    b.childNodes[0].textContent='Read more ';
+  });
+  if(expBtns.length>0){
+    const first=expBtns[0];
+    first.classList.add('open');
+    first.nextElementSibling.classList.add('open');
+    const arr=first.querySelector('.arr');
+    if(arr) arr.style.transform='rotate(180deg)';
+    first.childNodes[0].textContent='Read less ';
+  }
 }
 
 function tog(btn){
-  var block=btn.nextElementSibling;
-  block.classList.toggle('open');
+  const blk=btn.nextElementSibling;
+  const open=blk.classList.contains('open');
+  blk.classList.toggle('open');
   btn.classList.toggle('open');
+  const arr=btn.querySelector('.arr');
+  if(arr) arr.style.transform=open?'':'rotate(180deg)';
+  btn.childNodes[0].textContent=open?'Read more ':'Read less ';
 }
 
 function togSol(id){
   document.getElementById(id).classList.toggle('open');
 }
 
-function updDiag(key,inp){
-  var body=inp.closest('.sol-body');
-  var inputs=body.querySelectorAll('input[type=range]');
-  var sum=0;
-  inputs.forEach(function(i){sum+=parseInt(i.value);});
-  var avg=sum/inputs.length;
-  var ds=body.querySelector('.diag-sum');
-  var dt=body.querySelector('.sum-txt');
-  if(avg>=3){
-    ds.classList.add('on');
-    if(avg>=4){
-      dt.textContent='Your scores indicate this is a high-priority activation area. The friction is real and the cost of inaction is measurable.';
-    } else {
-      dt.textContent='Your scores suggest meaningful friction here. Worth exploring as part of a Rumble.';
-    }
-  } else {
-    ds.classList.remove('on');
-  }
-}
-
-function togGrp(el){
-  var body=el.nextElementSibling;
-  el.classList.toggle('open');
-  body.classList.toggle('open');
-}
-
 function togStg(hd){
   hd.parentElement.classList.toggle('open');
+}
+
+function togGrp(hd){
+  const body=hd.nextElementSibling;
+  const open=body.classList.contains('open');
+  body.classList.toggle('open');
+  hd.classList.toggle('open');
 }
 
 function togPair(hd){
   hd.parentElement.classList.toggle('open');
 }
+
+const diagLabels={
+  f:['Best hours go to spreadsheets and manual work','Reconciling reports instead of relying on them','Month-end close takes weeks','Forecasts built on old assumptions'],
+  r:['Sales forecasts not trusted by leadership','Deal risk found too late','Outreach built for volume not quality','New reps ramp too slowly'],
+  m:['Content not building required presence','Marketing spend not connected to revenue','Marketing and sales disagree on good leads','Budget committed before knowing what works'],
+  h:['Losing top candidates to faster companies','Finding out people are leaving too late','HR time spent on work a system should handle','People data too fragmented'],
+  o:['Supply chain problems reach customers first','Quality issues surface downstream','Planning against forecasts that do not hold','Processes built for an outgrown business'],
+  me:['Key people cannot meet knowledge demand','Institutional knowledge lost when people leave','New team members ramp too slowly','Same questions asked repeatedly'],
+  it:['IT team focused on tickets not initiatives','Provisioning and onboarding take too long','Lack of environment visibility until something breaks','Team too stretched for transformative projects'],
+  sec:['Vulnerabilities found after damage is done','Access governance is manual and inconsistent','Compliance demonstration is unsustainable','Security posture built for an outgrown business']
+};
+
+const diagCache={};
+
+function updDiag(key,slider){
+  const card=slider.closest('.sol-card');
+  const sliders=card.querySelectorAll('input[type=range]');
+  const vals=Array.from(sliders).map(s=>parseInt(s.value));
+
+  sliders.forEach(s=>{
+    const pct=((s.value-1)/4)*100;
+    s.style.background=`linear-gradient(to right,#00C896 ${pct}%,rgba(255,255,255,0.1) ${pct}%)`;
+  });
+
+  const avg=vals.reduce((a,b)=>a+b,0)/vals.length;
+  const sum=card.querySelector('.diag-sum');
+  if(!sum) return;
+
+  if(avg>=3){
+    const labels=diagLabels[key]||[];
+    const high=vals.map((v,i)=>({v,l:labels[i]})).filter(x=>x.v>=4).map(x=>x.l);
+    sum.classList.add('on');
+    const txt=card.querySelector('.sum-txt');
+    if(txt){
+      if(high.length>0){
+        txt.textContent=high.length===1
+          ? '"'+high[0]+'" is showing up as a real friction point.'
+          : 'Key friction: '+high.slice(0,-1).map(l=>'"'+l+'"').join(', ')+' and "'+high[high.length-1]+'".';
+      } else {
+        txt.textContent='There is meaningful friction here worth exploring.';
+      }
+    }
+  } else {
+    sum.classList.remove('on');
+  }
+}
+
+function downloadMD(){var md="# Augusto Digital \u2014 GTM Plan 2026\n\n*Internal use only. Password-protected at gtm.augusto.digital.*\n\n---\n\n## Start Here \u00b7 01 \u2014 S0\n\n---\n\n## Strategy \u00b7 02 \u2014 The 2026 Positioning\n\nThe positioning framework is the foundation of how we tell the Augusto story.\n\nThe goal is to describe Augusto consistently, credibly, and built around what matters most to the people we serve. What follows is Augusto's 2026 framework, built from the ground up to reflect who we are, who we serve, and why buyers choose us.\n\n\n---\n\n## Strategy \u00b7 03 \u2014 How We Got Here\n\nThis section captures how, prior to the positioning refresh, the team tells the Augusto story.\n\nWe surveyed the team across all six positioning framework components and asked each person to describe Augusto in their own words. What came back revealed where the team is aligned, where the story is drifting, and where the most important opportunities to sharpen our positioning were hiding.\n\n**Category:** The team described Augusto as an AI consulting agency, a software development firm, or a digital transformation company.\n**Attribute:** The team reached for ROI, speed, and methodology names to explain what sets Augusto apart.\n**Benefit:** The team led almost entirely with business outcomes: measurable growth, faster results, lower cost.\n**Reason to Believe:** The team pointed to proven methods, the Digital Pace Framework, and speed to value as the reasons to believe.\n**Proof:** The team's strongest responses were here. Follow-on engagements, long-term clients, the satisfaction guarantee.\n**Ask:** Near-universal alignment on the Rumble as the entry point. Small bet, quick win, fast proof of value.\n\n---\n\n## Strategy \u00b7 04 \u2014 The Competitive Context\n\nUnderstanding where competitors are positioned tells us where the opportunities to stand apart actually exist.\n\nThe Applied AI and AI consulting market is crowded with firms using similar language to describe similar services. This section maps where the team's instinctive language blended into that crowd, and where the 2026 framework creates separation. The goal is not to criticize competitors but to help every Augusto team member understand what makes our story distinct and why that distinction is worth protecting.\n\n---\n\n## Market \u00b7 05 \u2014 Who We Serve\n\nAugusto is built for mid-market companies navigating the gap between AI aspiration and AI that actually works.\n\nMid-market companies sit in a specific position in the AI adoption landscape. They are large enough to feel the cost of AI that is not delivering and lean enough to move quickly when they find the right partner. They are past the question of whether to pursue AI. They are stuck on how to make it work, with their people, in their existing environment, without betting the business to find out.\n\n**Who They Are:** Companies typically between $50M and $1B in revenue, with established operations and teams who are being asked to do more with AI.\n**What They Are Experiencing:** They have seen the demos. Some have bought the tools. Most are struggling to make AI produce the results they were promised.\n**Why the Timing Matters:** The mid-market companies that activate AI effectively in the next twelve to eighteen months will have a compounding advantage that latecomers will struggle to close.\n**What They Need from a Partner:** They need a firm that starts with their people, understands their environment, and builds AI that their teams will actually use.\n\n---\n\n## Market \u00b7 06 \u2014 What We Offer\n\nAugusto delivers Intelligence solutions across nine core functions, each built to activate AI where your people need it most.\n\nWe deliver intelligence-focused solutions based on understanding how to activate AI where your people need it most. Sometimes that means building from the ground up. Sometimes it means identifying the right platform and integrating it into your environment. Sometimes the solution already exists from work we have done for others and needs last mile alignment to work for you. What stays constant is that we own it. From implementation through evolution.\n\n### Finance Intelligence\nAugusto identifies where your finance operation is losing capacity to manual work and builds the AI systems that free your team to lead.\n\n### Revenue Intelligence\nAugusto builds the AI systems that take the work surrounding selling off your team's plate.\n\n### Marketing Intelligence\nAugusto connects your marketing activity to the revenue it drives.\n\n### HR Intelligence\nAugusto builds the AI systems that give your HR team its time back and your leadership a clearer picture of the workforce.\n\n### Operations Intelligence\nAugusto pinpoints where your operation is absorbing cost it should not and builds the AI systems that change that.\n\n### Company Intelligence\nAugusto builds AI systems that capture what your organization knows and amplify what your people can do with it \u2014 across every function, not just one.\n\n### IT Intelligence\nAugusto pinpoints where your IT team is absorbing reactive work and builds the AI systems that shift them from maintenance mode to driving the business forward.\n\n### Security Intelligence\nAugusto builds the AI systems that give your organization visibility into its risk before that risk becomes a problem.\n\n### Engineering Intelligence\nAugusto builds the AI systems that give your engineering team leverage \u2014 so they spend less time on the work surrounding development and more time on the work that moves the product forward.\n\n---\n\n## Execution \u00b7 07 \u2014 How We Work\n\nAugusto's engagement model is built around three commitments: diagnose before building, deliver proof before asking for a larger bet, and stand behind the work long after the engagement begins.\n\nMost firms sell a scope of work and deliver against it. Augusto is structured differently. Every engagement starts with understanding, moves through a defined proof point, and evolves into a long-term partnership held accountable by a guarantee most firms are not in a position to make.\n\n### Step 1 \u2014 The Rumble\n        Activate Where AI Goes First\n        Use a structured discovery process to map the full picture of AI activation opportunities across your core business functions: IT, Operations, Finance, Sales, Marketing, HR, and beyond.\n        \n          \n            $10,000\n            Single Core Function Focus\n            Pinpoint one high-priority domain (Finance, Operations, Sales, etc.) and map where to activate AI first.\n          \n          \n            Recommended\n            $25,000\n            Business-Wide Diagnosis\n            Full cross-functional view across all domains. A complete activation roadmap with priorities ranked by impact.\n          \n        \n        Result? You walk away with a prioritized roadmap and a summarized scale of win opportunities we are ready to build.\n      \n      \n        Step 2\n        The Scale of Win\nComing out of the Rumble, the client chooses the scale of engagement that fits their priority and readiness.\n\n### Step 3 \u2014 Satisfaction Guarantee\nEvery Augusto engagement is backed by a satisfaction guarantee.\n\n**Why This Model Works:** The Rumble lowers the barrier to starting. The guarantee removes the fear of being abandoned. Together they create the conditions for a long-term partnership built on trust that compounds over time.\n\n---\n\n## Execution \u00b7 08 \u2014 How to Talk About Us\n\nThis section gives every Augusto team member the language to describe who we are, what we do, and why it matters, consistently and confidently.\n\nInconsistent language is one of the most common and most costly growth problems a company can have. When sales says one thing, marketing says another, and delivery says a third, buyers build an unclear picture of who Augusto is. This section removes that inconsistency. It is not a script. It is a shared foundation that every role can build from.\n\n### How to Open\nStart with who Augusto is and who we serve before explaining what we do.\n> \"Augusto is an Ai Activation Partner for mid-market companies. We work with organizations that are past the question of whether to pursue AI and stuck on how to make it actually work, with their people, in their existing environment.\"\n\n### How to Explain the Benefit\nLead with what changes for the people inside the organization, not what Augusto builds.\n> \"We start by pinpointing where your people are spending energy that AI should be carrying. Then we build the Intelligence solution that changes that. The result is a team that can do what they were hired to do, instead of absorbing work a system should be handling.\"\n\n### How to Handle the AI Fear\nWhen a buyer raises concern about AI replacing their people, meet it directly.\n> \"That is exactly why we lead with your people, not the technology. Our job is to amplify what your team can achieve, not replace who they are. Every solution we build is designed around the people who will use it, not around the technology that powers it.\"\n\n### How to Introduce the Proof\nUse the retention data and the guarantee before the buyer asks for evidence.\n> \"More than half of our revenue comes from clients who came back for more. Our first client is still with us today. And every engagement we run is backed by a satisfaction guarantee. Every ninety days we check in on results, ROI, and any risks. If it is not working, we fix it. At no additional cost.\"\n\n### How to Close\nEnd every conversation with the same invitation.\n> \"Put AI to work for your people. The way we start is with a Rumble, a two-week working session at a fixed price that gives you a prioritized roadmap and a quick win ready to build. It is a small enough commitment to say yes to and big enough to show you exactly what is possible.\"\n\n**What to Avoid:**\n- Do not lead with the Digital Pace Framework by name. It means nothing to a buyer who has not heard it before. Lead with what it produces, not what it is called.\n- Do not lead with ROI as the primary benefit. It is what the CFO needs to approve the decision, not what makes the champion decide to fight for it.\n- Do not describe Augusto as a consulting firm, an agency, or a software development company. These are accurate but they are not ownable and they do not differentiate.\n- Do not let a conversation end without naming the Rumble as the next step. A buyer who leaves without a specific action to take is a buyer who will not call back.\n\n---\n\n## Execution \u00b7 09 \u2014 Our Proof\n\nAugusto's proof is not a logo wall or a case study PDF. It is a set of operational commitments and results that hold us accountable in ways most firms avoid.\n\nAnyone can claim results. The proof that matters is the kind that is structural, verifiable, and built into how Augusto works rather than assembled after the fact for a sales presentation. What follows is the proof Augusto can stand behind in every conversation.\n\n**Retention:** More than half of Augusto's revenue comes from clients who came back.\n**Tenure:** Augusto's first client is still a client today.\n**The Guarantee:** Every Augusto engagement is backed by a satisfaction guarantee.\n**Scale:** 10 years in business focused on using technology to amplify what teams can achieve.\n**Return on Investment:** Augusto's engagements are designed to produce measurable results, not activity reports.\n\n**Key Metrics:**\n- 50%+ \u2014 Follow-on Revenue\n- 10 yrs \u2014 In Business\n- Day 1 \u2014 First Client Still Active\n- 90-day \u2014 Satisfaction Guarantee\n\n---\n\n## Buyer \u00b7 10 \u2014 Who We Sell To\n\nAugusto's solutions touch every part of a mid-market organization. The CEO or President is the ideal Champion. Core function leaders (CHRO, CSO, COO, CMO) are often the right entry point, and any one of them can build the case upward.\n\nEvery Augusto opportunity requires the rep to map three things: who holds each buyer role, what title they carry in this specific organization, and how they make decisions. Roles tell you what a person controls in the process. Titles tell you where they sit in the hierarchy. Styles tell you how to engage them. A rep who can read all three simultaneously is operating at a level that consistently closes deals. A rep who treats every contact the same will struggle to advance past Investigate.\n\n\n**C-Suite:** CFO, CHRO, CTO, COO, CSO. Common entry points when the CEO is not the starting contact. Strong Champions when their function has the acute problem. Often the Check Writer for Quick Win engagements.\n**Function Leader:** VP-level leaders of specific business functions. Frequently the End User whose team will use the solution day to day. Can be a Champion when they are driving the initiative within their function and have access to C-Suite sponsorship.\n**Mid-level Leader:** Directors, Senior Managers. Rarely the Check Writer. Often the best source of coaching intelligence: they know how the organization actually works and what has failed before. Invest in these relationships early.\n**Frontline Leader:** Managers, Team Leads. Carries the adoption concern most acutely: will the team actually use this, and will they be left to figure it out alone. Address Augusto's guarantee and support model directly with this contact.\n**HubSpot: Document Every Contact:** For each member of the buying committee, log their buyer role (Check Writer, Champion, Coach, or Passive Influencer), title level, and behavior style in HubSpot as contact properties. This creates a shared reference that persists across the full selling sequence so the entire Growth team engages each person with the right approach at the right time.\n**The North Star:** Managing a full buying committee requires holding multiple relationships simultaneously, each with different roles, titles, motivations, and pacing needs. A rep who brings a single approach to a committee of five will lose deals to one who does not. Map the roles. Know the titles. Read the styles. Document what you observe. Adapt how you engage. That is the discipline.\n\n### Buyer Roles\nMap each of the four roles to a real person in the lead company before the first appointment. These roles are not titles. One person can hold more than one.\n\n### Buyer Titles\nTitles indicate where a contact sits in the organizational hierarchy. They do not determine buyer role, but they shape the conversation's altitude and inform what the contact is optimizing for.\n\n### Buyer Styles\nOnce the committee is mapped by role and title, identify how each person makes decisions. Style determines pace, depth, and emotional driver.\n\n> **The North Star:** Managing a full buying committee requires holding multiple relationships simultaneously, each with different roles, titles, motivations, and pacing needs. A rep who brings a single approach to a committee of five will lose deals to one who does not. Map the roles. Know the titles. Read the styles. Document what you observe. Adapt how you engage. That is the discipline.\n\n---\n\n## Execution \u00b7 11 \u2014 The Selling System\n\nAugusto operates three separate lines of business, each with its own HubSpot pipeline and selling motion.\n\nKeeping these pipelines separate ensures that revenue is tracked cleanly by line of business, conversion rates are meaningful for each selling motion, and no deal sits in a waiting pattern while another progresses. Each pipeline has its own stages, its own exit criteria, and its own definition of closed won.\n\n**Pipeline Stages:**\n- **MQO** (1%) \u2014 Marketing Qualified Opportunity\n- **Qualifying** (1%) \u2014 Complete the picture\n- **Negotiate** (70%) \u2014 ACR Method\n- **Closing** (80%) \u2014 Onboarding Team Lead\n- **Closed Won** (100%) \u2014 Rumble begins\n- **Closed Lost** (0%) \u2014 Log and learn\n- **Proposal Shared** (\u2014) \u2014 Scale of Win proposal tool\n- **Validate** (\u2014) \u2014 1-3-5 scoring\n- **Negotiate** (\u2014) \u2014 ACR Method\n- **Closing** (\u2014) \u2014 Onboarding Team Lead\n- **Closed Won / Closed Lost** (\u2014) \u2014 Revenue recorded\n\n**The Rumble** \u2014 The entry point for AI Activation. A fixed-scope diagnostic engagement. 10-stage pipeline from quiz funnel entry to signed contract. _$10K \u00b7 $25K_\n**Scale of Wins** \u2014 A new opportunity opened after the Rumble delivers its identified wins. 5-stage pipeline anchored by the proposal tool. Not a continuation of the Rumble deal. _$25K \u2013 $250K+_\n**Projects** \u2014 One-off engagements outside the Rumble pathway. Separate pipeline, separate revenue contribution. Defined independently. _TBD_\n\n---\n\n## Execution \u00b7 12 \u2014 Handling Resistance\n\nEvery rep will encounter resistance. The ACR method gives you a consistent framework for addressing it without arguing, conceding, or losing momentum.\n\nResistance is not rejection. A buyer who raises a concern is a buyer who is still in the conversation. The rep who treats every objection as a signal to investigate \u2014 rather than a wall to push through \u2014 consistently converts deals that weaker reps mark as lost. What follows is the method and the most common objections a rep will face selling Augusto specifically.\n\n### Timing \u00b7 \"We're not sure we're ready\"\nThe most common entry objection. Usually a signal that the buyer does not know where to start, not that they do not want to start.\n        \n          Clarify\n> \"What would ready look like for you? What would need to be in place?\"\n\n### Credibility \u00b7 \"We've tried AI before and it didn't deliver\"\nValidate the frustration immediately. The failure history is your opening, not a barrier.\n        \n          Clarify\n> \"What did you try? What happened?\"\n\n### Internal \u00b7 \"We have internal resources\"\nDo not compete with their team. Position Augusto as the resource that gives their team leverage.\n        \n          Clarify\n> \"What have they been able to accomplish so far? Where are they getting stuck?\"\n\n### Investment \u00b7 \"The price is too high\"\nClarify before responding. The concern is either absolute budget or relative value \u2014 the response is different for each.\n        \n          Clarify\n> \"Is it an absolute budget constraint, or is it a question of whether the value justifies the investment?\"\n\n### Stall \u00b7 \"I need to think about it\"\nThis is not a real objection. It is a signal that the rep has not yet earned a five on both Validate questions. Return to investigation before attempting to close.\n        \n          Clarify\n> \"Of course \u2014 what specifically is on your mind? What question would help you decide?\"\n\n### Internal \u00b7 \"I need to get buy-in first\"\nArm the Champion. Your job is to give them what they need to win internally \u2014 not to wait.\n        \n          Clarify\n> \"Who specifically needs to be on board? What concern do they have?\"\n\n### Competitive \u00b7 \"How is this different from what [competitor] offers?\"\nDo not run a feature comparison. Anchor on where Augusto starts \u2014 diagnosis before solution \u2014 and close with the guarantee.\n        \n          Clarify\n> \"What did they pitch? What appealed to you and what gave you pause?\"\n\n**The ACR Method:** The ACR method turns every objection into a three-step conversation. It works on every concern, at every stage, with every buyer type.\n**The North Star:** A rep who hears an objection and responds immediately is defending. A rep who hears an objection and clarifies first is investigating. The difference in outcome is not small. Acknowledge what they said. Understand what is actually behind it. Then give the answer that addresses what is actually there.\n\n> **The North Star:** A rep who hears an objection and responds immediately is defending. A rep who hears an objection and clarifies first is investigating. The difference in outcome is not small. Acknowledge what they said. Understand what is actually behind it. Then give the answer that addresses what is actually there.\n\n---\n\n## Execution \u00b7 13 \u2014 The Close\n\nThe close begins at Negotiate and ends when the contract is executed. It is a sequence \u2014 not a moment.\n\nA rep who treats closing as a single moment will miss the discipline that makes it consistent. The close is four things done in order: earn the verbal commitment, prepare the deal brief, run the handoff meeting, and support the three tracks through contract execution. Skipping or shortcutting any of them adds risk to a deal that has already cleared the hardest part of the pipeline.\n\n\n**The North Star:** Most deals that die after the verbal commitment die because no one owned what happened next. The deal brief, the handoff meeting, and the three tracks exist to ensure that the rep's conviction in the close transfers into the execution that follows it. A deal that closes and does not start is not a win. It is a delayed loss.\n\n> **The North Star:** Most deals that die after the verbal commitment die because no one owned what happened next. The deal brief, the handoff meeting, and the three tracks exist to ensure that the rep's conviction in the close transfers into the execution that follows it. A deal that closes and does not start is not a win. It is a delayed loss.\n\n---\n\n## Marketing Strategy \u2014 Marketing Strategy\n\nAugusto's marketing strategy is built around three realities: mid-market buyers are cautious, AI has overpromised before, and the Rumble is the single best proof point Augusto holds.\n\nMarketing's job is not to close deals. It is to create enough credibility, enough clarity, and enough urgency that the right buyer arrives at the first sales conversation already convinced of three things: that this problem is real, that Augusto is a credible partner to solve it, and that the Rumble is a small enough bet to say yes to. Every channel, every piece of content, and every campaign should be designed to move a mid-market buyer to that threshold.\n\n**The Channel Mix:** Three buckets: channels we own, channels we earn, and channels we pay for. Each requires a different investment and produces a different quality of lead.\n**The Lead Engine:** The quiz funnel is the primary lead generation mechanism. It generates MQOs and pre-sells the diagnostic model before the first sales conversation begins.\n**Messaging by Channel:** The message is always the buyer's problem first. Augusto's capabilities second. The Rumble as the next step.\n**2026 Campaign Priorities:** Three priorities in order. Do not move to Priority 2 until Priority 1 is running cleanly.\n**The North Star:** Marketing does not close deals. It builds the conditions that make the first sales conversation easier. A buyer who arrives having seen Augusto's point of view, read a client story that sounds like their situation, and completed the quiz funnel is a buyer who is already partially sold. That is the job.\n\n> **The North Star:** Marketing does not close deals. It builds the conditions that make the first sales conversation easier. A buyer who arrives having seen Augusto's point of view, read a client story that sounds like their situation, and completed the quiz funnel is a buyer who is already partially sold. That is the job.\n\n---\n\n## Marketing Strategy \u2014 LinkedIn\n\nLinkedIn is Augusto's highest-leverage owned channel. The goal is not follower counts \u2014 it is to build enough consistent presence that the right mid-market buyer recognizes Augusto's point of view before the first conversation begins.\n\n**Content Strategy:** One post per week per key leader. Consistent over sixty to ninety days builds authority that paid spend cannot buy.\n**Key Leaders:** Three voices publishing consistently creates more surface area than one brand account. Each leader owns a distinct angle tied to their role and buyer relationship.\n**Paid LinkedIn:** Paid spend amplifies owned content. It does not replace it. No paid campaign should run until the organic content calendar is running cleanly for thirty days.\n\n---\n\n## Marketing Strategy \u2014 Events\n\nEvents are Augusto's highest-trust channel. One leader on a panel or keynote in a mid-market CFO, COO, or CEO forum is worth more than months of content. Show up as a practitioner with a point of view \u2014 not a vendor with a pitch.\n\n";var blob=new Blob([md],{type:"text/markdown"});var a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="Augusto-GTM-2026.md";a.click();URL.revokeObjectURL(a.href);}
 </script>
 </body>
 </html>
