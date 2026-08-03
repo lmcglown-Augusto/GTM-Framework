@@ -361,6 +361,7 @@ h2 { font-family: var(--font-display); font-size: 36px; font-weight: 400; color:
   <!-- Contact info -->
   <div class="admin-field"><label class="admin-label">Company Name</label><input class="admin-input" id="cfg-company" placeholder="Acme Corporation"></div>
   <div class="admin-field"><label class="admin-label">Decision Maker's Name</label><input class="admin-input" id="cfg-contact" placeholder="Jane Smith, CEO"></div>
+  <div class="admin-field"><label class="admin-label">Today's Date</label><input class="admin-input" id="cfg-start-date" type="date"></div>
   <div class="admin-field"><label class="admin-label">Prepared By (Augusto)</label><input class="admin-input" id="cfg-preparedby" value="Lawrence McGlown"></div>
   <div class="admin-field"><label class="admin-label">Rep Email (LOI notification)</label><input class="admin-input" id="cfg-rep-email" type="email" value="lmcglown@augustodigital.com"></div>
 
@@ -611,6 +612,7 @@ function clampToBucket(tier, bucketId, value) {
 // ─── STATE ─────────────────────────────────────────────────
 const S = {
   company: 'your company', contact: '', preparedBy: 'Lawrence McGlown', repEmail: 'lmcglown@augustodigital.com',
+  startDate: '', // the date the rep enters in setup — anchors the timeline view to real calendar dates
   opps: [],   // { title, desc, tier:'QW'|'CW', bucket, price, cwQtrs, timing, func } — ME&T is auto-derived, not stored
   archivedOpps: [], // wins removed via the trash icon — reactivate any time
   qwUC: [], cwUC: [],
@@ -628,6 +630,15 @@ function winPrice(o)      { return clampToBucket(o.tier, o.bucket, o.price); }
 function winMonthlyRate(o) { return winPrice(o) / (winQtrs(o) * 3); }
 function winMETAnnual(o)  { return MET_RATE * winPrice(o); }   // 10% of bid, per year
 function winMETMonthly(o) { return winMETAnnual(o) / 12; }     // monthly ME&T contribution once a win's window ends
+// Anchor the timeline view to the rep-entered start date instead of abstract quarter counts.
+function addMonths(dateStr, months) {
+  const d = new Date((dateStr || new Date().toISOString().split('T')[0]) + 'T00:00:00');
+  d.setMonth(d.getMonth() + months);
+  return d;
+}
+function qtrDateLabel(colIndex) {
+  return addMonths(S.startDate, (colIndex - 1) * 3).toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+}
 function getByTiming(t)         { return S.opps.filter(o => o.timing === t); }
 function getNowBaseTotal()      { return getByTiming('now').reduce((s,o) => s + winPrice(o), 0); }
 function getNowMETotal()        { return getByTiming('now').reduce((s,o) => s + winMETMonthly(o), 0); }
@@ -851,6 +862,7 @@ function pickTier(btn) {
 function applyConfig() {
   S.company = document.getElementById('cfg-company').value.trim() || 'your company';
   S.contact = document.getElementById('cfg-contact').value.trim();
+  S.startDate = document.getElementById('cfg-start-date').value || new Date().toISOString().split('T')[0];
   S.preparedBy = document.getElementById('cfg-preparedby').value.trim() || 'Lawrence McGlown';
   S.repEmail = document.getElementById('cfg-rep-email').value.trim() || 'lmcglown@augustodigital.com';
   const prevOpps = S.opps;
@@ -1203,19 +1215,19 @@ function renderGanttHTML(nowWins, nextWins, laterWins) {
     1
   );
 
-  const colTemplate = `200px repeat(${totalQtrs}, minmax(64px, 1fr))`;
+  const colTemplate = `200px repeat(${totalQtrs}, minmax(84px, 1fr))`;
   let items = [];
   let row = 1;
 
   items.push(`<div style="grid-row:${row};grid-column:1;"></div>`);
   for (let q = 1; q <= totalQtrs; q++) {
-    items.push(`<div class="gantt-scale-cell" style="grid-row:${row};grid-column:${1+q};">Q${q}</div>`);
+    items.push(`<div class="gantt-scale-cell" style="grid-row:${row};grid-column:${1+q};">${qtrDateLabel(q)}</div>`);
   }
   row++;
 
   function addGroup(label, wins, color, start) {
     if (!wins.length) return;
-    items.push(`<div class="gantt-phase-tag" style="grid-row:${row};grid-column:1 / -1;background:${color};">${label} <span>— begins Q${start}</span></div>`);
+    items.push(`<div class="gantt-phase-tag" style="grid-row:${row};grid-column:1 / -1;background:${color};">${label} <span>— begins ${qtrDateLabel(start)}</span></div>`);
     row++;
     wins.forEach(o => {
       const dur = winQtrs(o);
@@ -1476,6 +1488,7 @@ function submitLOI() {
 function generateLeadLink() {
   const company    = document.getElementById('cfg-company').value.trim() || 'your company';
   const contact    = document.getElementById('cfg-contact').value.trim();
+  const startDate  = document.getElementById('cfg-start-date').value || new Date().toISOString().split('T')[0];
   const preparedBy = document.getElementById('cfg-preparedby').value.trim() || 'Lawrence McGlown';
   const repEmail   = document.getElementById('cfg-rep-email').value.trim() || 'lmcglown@augustodigital.com';
   const opps = [];
@@ -1492,7 +1505,7 @@ function generateLeadLink() {
   });
   const qwUC = (document.getElementById('cfg-qw-usecases').value || '').split('\n').map(l => l.trim()).filter(Boolean);
   const cwUC = (document.getElementById('cfg-cw-usecases').value || '').split('\n').map(l => l.trim()).filter(Boolean);
-  const cfg = { company, contact, preparedBy, repEmail, opps, qwUC, cwUC };
+  const cfg = { company, contact, startDate, preparedBy, repEmail, opps, qwUC, cwUC };
   try {
     const encoded = btoa(encodeURIComponent(JSON.stringify(cfg)));
     const url = location.origin + location.pathname + '?c=' + encoded;
@@ -1536,6 +1549,9 @@ function copyLeadLink() {
     }
   } catch(e) { console.warn('Lead config parse error:', e); }
 
+  // Fall back to today if no start date was set (fresh setup, or an older lead link generated before this field existed).
+  S.startDate = S.startDate || new Date().toISOString().split('T')[0];
+
   if (!isLeadMode) {
     S.opps = [
       { title: 'AI-assisted email & proposal drafting', desc: 'Draft client-ready emails and proposals from notes in seconds', tier: 'QW', bucket: 'd30', price: 32000, cwQtrs: 3, timing: null, func: 'Sales' },
@@ -1566,6 +1582,7 @@ function copyLeadLink() {
     S.opps.forEach(o => addOppField(o));
     document.getElementById('cfg-qw-usecases').value = S.qwUC.join('\n');
     document.getElementById('cfg-cw-usecases').value = S.cwUC.join('\n');
+    document.getElementById('cfg-start-date').value = S.startDate;
   }
 
   document.getElementById('welcome-company').textContent = S.company;
