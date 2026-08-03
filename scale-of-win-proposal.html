@@ -471,8 +471,7 @@ h2 { font-family: var(--font-display); font-size: 36px; font-weight: 400; color:
   <div class="nav"><div class="nav-wordmark"><img class="brand-logo" alt="Augusto" src="augusto-logo.png"></div></div>
   <div class="content fade-in">
     <div class="section-label">Step 1 of 2 · Alignment</div>
-    <h2>Choose Your Billing</h2>
-    <p class="lead" id="s5-lead">Your Now wins activate immediately upon approval. Review the engagement term and choose how you'd like to be invoiced.</p>
+    <h2>Choose Your Preferred Billing</h2>
     <div class="duration-grid" id="duration-grid"></div>
     <div class="btn-row">
       <button class="btn-secondary" onclick="goTo(4)">← Back</button>
@@ -1316,32 +1315,24 @@ function renderPaymentSchedule() {
   const quarterlyAmt = freqAmount(elevated, 'quarterly');
   const semiAmt = freqAmount(elevated, 'semiannual');
 
-  const leadEl = document.getElementById('s5-lead');
-  if (leadEl) {
-    leadEl.textContent = `Your Now wins launch upon approval. Choose your preferred billing.`;
-  }
-
   document.getElementById('duration-grid').style.gridTemplateColumns = '1fr 1fr 1fr';
   document.getElementById('duration-grid').innerHTML = `
     <div class="dur-card" id="dc-monthly" onclick="selectPaySchedule('monthly')">
       <div class="dur-title">Billed Monthly</div>
       <div class="dur-price">${fmt(monthlyAmt)}<span>/mo</span></div>
-      <p class="dur-desc">Invoiced every month during your execution window.</p>
-      <ul class="dur-list"><li>No discount</li></ul>
+      <p class="dur-desc">Invoiced monthly.</p>
     </div>
     <div class="dur-card" id="dc-quarterly" onclick="selectPaySchedule('quarterly')">
       <div class="dur-badge">Save ${Math.round(QUARTERLY_DISCOUNT*100)}%</div>
       <div class="dur-title">Billed Quarterly</div>
       <div class="dur-price">${fmt(quarterlyAmt)}<span>/qtr</span></div>
-      <p class="dur-desc">Invoiced every 3 months at a preferred rate.</p>
-      <ul class="dur-list"><li>Save ${Math.round(QUARTERLY_DISCOUNT*100)}% vs. monthly</li></ul>
+      <p class="dur-desc">Invoiced every 3 months.</p>
     </div>
     <div class="dur-card" id="dc-semiannual" onclick="selectPaySchedule('semiannual')">
       <div class="dur-badge">Save ${Math.round(SEMIANNUAL_DISCOUNT*100)}%</div>
       <div class="dur-title">Billed Semi-Annually</div>
       <div class="dur-price">${fmt(semiAmt)}<span>/6 mo</span></div>
-      <p class="dur-desc">Invoiced every 6 months at our best rate.</p>
-      <ul class="dur-list"><li>Save ${Math.round(SEMIANNUAL_DISCOUNT*100)}% vs. monthly</li></ul>
+      <p class="dur-desc">Invoices every 6 months.</p>
     </div>
     <div class="plan-phase-note" style="grid-column:1/-1;">You can pause or adjust your baseline run rate with 30 days' written notice.</div>`;
   if (S.paySchedule) {
@@ -1375,9 +1366,8 @@ function renderSummary() {
     ${nextWins.length?`<div class="summary-row"><div class="s-label">Next — On deck</div><div class="s-value">${nextWins.map(o=>o.title).join(', ')}</div></div>`:''}
     ${laterWins.length?`<div class="summary-row"><div class="s-label">Later — Future phase</div><div class="s-value">${laterWins.map(o=>o.title).join(', ')}</div></div>`:''}
     <div class="summary-row"><div class="s-label">Billing</div><div class="s-value">${freqLabel(freq)}${freq!=='monthly' ? ` (save ${freq==='quarterly'?Math.round(QUARTERLY_DISCOUNT*100):Math.round(SEMIANNUAL_DISCOUNT*100)}%)` : ''}</div></div>
-    <div class="summary-row"><div class="s-label">Now wins — Baseline Billing Rate value</div><div class="s-value big">${fmt(base)}</div></div>
     <div class="summary-row"><div class="s-label">Invoiced amount</div><div class="s-value green">${fmt(invoiceAmt)} / ${freq==='monthly'?'month':freq==='quarterly'?'quarter':'6 months'}</div></div>
-    <div class="summary-row"><div class="s-label">Rate after Now completes</div><div class="s-value">${fmt(postNow)}/mo</div></div>`;
+    <div class="summary-row"><div class="s-label">NEXT (phase)  Baseline Billing Rate</div><div class="s-value">${fmt(postNow)}/mo</div></div>`;
 }
 
 // ─── SCREEN 7: LOI ─────────────────────────────────────────
